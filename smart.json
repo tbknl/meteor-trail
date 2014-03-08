@@ -1,0 +1,9 @@
+{
+	"name": "trail",
+	"description": "Pluggable logging for Meteor",
+	"homepage": "https://github.com/tbknl/meteor-trail",
+	"author": "Dave van Soest (dave.soest@gfk.com)",
+	"version": "0.1.0",
+	"git": "https://github.com/tbknl/meteor-trail.git",
+	"packages": {}
+}
