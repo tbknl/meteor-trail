@@ -1,4 +1,4 @@
-// Handle transport settings:
+// Add transports to logger:
  var transports = Trail.Settings.Config.transports;
 if (transports instanceof Array) {
     for (var i = 0; i < transports.length; ++i) {

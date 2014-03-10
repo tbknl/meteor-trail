@@ -16,16 +16,8 @@ Package.on_use(function(api) {
     api.add_files('trail_transports.js', ['server', 'client']);
     api.add_files('trail_share-server.js', ['server']);
     api.add_files('trail_share-client.js', ['client']);
-    api.add_files('trail_monitor-shared.js', ['server', 'client']);
-    api.add_files('trail_monitor-server.js', ['server']);
-    api.add_files('trail_monitor-client.js', ['client']);
     api.add_files('trail_transport_console.js', ['server', 'client']);
     api.add_files('trail_transport_mongo.js', ['server']);
-
-    // TODO: Make the trail_monitor_console files optional:
-    api.add_files('monitor_console/trail_monitor_console.html', ['client']);
-    api.add_files('monitor_console/trail_monitor_console.js', ['client']);
-    api.add_files('monitor_console/trail_monitor_console.css', ['client']);
 
     api.export && api.export('Trail', ['server', 'client']);
 });
