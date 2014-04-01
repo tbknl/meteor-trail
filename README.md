@@ -1,5 +1,5 @@
 meteor-trail
-=====================
+============
 
 Trail - Pluggable logging for Meteor.
 
@@ -62,7 +62,7 @@ The above configuration defines two transports for the server side and one for t
 The available log levels are, in decreasing order: `DEBUG`, `INFO`, `WARN`, `ERROR`, `FATAL`.
 
 
-!!! Sharing client log messages to the server
+### Sharing client log messages to the server
 
 Client log messages can be shared with the server, with the following setting:
 ``` json
@@ -95,7 +95,7 @@ Instead of the value `true` you can also specify the maximum log level of the sh
 ```
 
 
-!!! Additional transports at run-time
+### Additional transports at run-time
 
 At run-time, additional transports can be added to a client-side logger. For example:
 ``` javascript
