@@ -2,7 +2,39 @@ Trail = {};
 
 
 Trail.Util = {
-    formatTimestamp: 'TODO'
+    // Format a timestamp:
+    formatTimestamp: function(timestamp, format) {
+        var date = new Date(timestamp);
+        var lut = Trail.Util._TimestampMethodLUT;
+
+        return format.replace(/%(.)/g, function(match, p1) {
+            if (p1 === '%') {
+                return '%';
+            }
+            else if (lut.hasOwnProperty(p1)) {
+                var m = lut[p1];
+                var result = '' + date[m.fn].call(date);
+                if (m.len && result.length < m.len) {
+                    result = Array(1 + m.len - result.length).join(m.pad) + result;
+                }
+                return result;
+            }
+            else {
+                return '%' + p1;
+            }
+        });
+    },
+    _TimestampMethodLUT: {
+        'Y': {fn: 'getFullYear', len: 4, pad: '0'},
+        'M': {fn: 'getMonth', len: 2, pad: '0'},
+        'D': {fn: 'getDate', len: 2, pad: '0'},
+        'h': {fn: 'getHours', len: 2, pad: '0'},
+        'm': {fn: 'getMinutes', len: 2, pad: '0'},
+        's': {fn: 'getSeconds', len: 2, pad: '0'},
+        'u': {fn: 'getMilliseconds', len: 3, pad: '0'},
+        'g': {fn: 'getTime'},
+        'o': {fn: 'getTimezoneOffset'}
+    }
 };
 
 

@@ -16,6 +16,13 @@ var consoleTransportLog = function(timestamp, level, message, meta) {
         if (meta._origin === 'client') {
             prefix = '(CLIENT: ' + clientId.slice(clientId.length - 8) + ') ';
         }
+
+        // Format timestamp:
+        var timestampFormat = this.options.timestampFormat;
+        if (typeof timestampFormat === 'string') {
+            timestamp = Trail.Util.formatTimestamp(timestamp, timestampFormat);
+        }
+
         msg = prefix + timestamp + ' [' + level + '] ' + message;
     }
 

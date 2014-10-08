@@ -1,6 +1,6 @@
 Package.describe({
     summary: "Trail - Pluggable logging for Meteor.",
-    version: "0.1.2",
+    version: "0.1.3",
     name: "mrt:trail",
     git: "https://github.com/tbknl/meteor-trail.git"
 });

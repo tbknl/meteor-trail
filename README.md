@@ -27,7 +27,8 @@ Separate Trail configurations can be made for the server and client. You can spe
         "type": "console",
         "options": {
           "meta": false,
-          "level": "DEBUG"
+          "level": "DEBUG",
+          "timestampFormat": "(%Y-%M-%D %h:%m:%s.%u)"
         }
       },
       {
